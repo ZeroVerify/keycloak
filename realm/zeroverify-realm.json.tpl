@@ -127,7 +127,8 @@
         "allowCreate": "true",
         "validateSignature": "true",
         "wantAssertionsSigned": "true",
-        "wantAuthnRequestsSigned": "false",
+        "wantAuthnRequestsSigned": "true",
+        "signatureAlgorithm": "RSA_SHA256",
         "addExtensionsElementWithKeyInfo": "false",
         "syncMode": "FORCE",
         "xmlSigKeyInfoKeyNameTransformer": "KEY_ID"
@@ -142,9 +143,9 @@
       "identityProviderMapper": "saml-username-idp-mapper",
       "config": {
         "syncMode": "FORCE",
-        "attribute": "eduPersonPrincipalName",
+        "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.6",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
-        "template": "${ATTRIBUTE.eduPersonPrincipalName}"
+        "template": "${ATTRIBUTE.urn:oid:1.3.6.1.4.1.5923.1.1.1.6}"
       }
     },
     {
@@ -154,7 +155,7 @@
       "identityProviderMapper": "saml-user-attribute-idp-mapper",
       "config": {
         "syncMode": "FORCE",
-        "attribute": "eduPersonAffiliation",
+        "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
         "user.attribute": "enrollment_status"
       }
@@ -166,7 +167,7 @@
       "identityProviderMapper": "saml-user-attribute-idp-mapper",
       "config": {
         "syncMode": "FORCE",
-        "attribute": "givenName",
+        "attribute": "urn:oid:2.5.4.42",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
         "user.attribute": "firstName"
       }
@@ -178,7 +179,7 @@
       "identityProviderMapper": "saml-user-attribute-idp-mapper",
       "config": {
         "syncMode": "FORCE",
-        "attribute": "sn",
+        "attribute": "urn:oid:2.5.4.4",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
         "user.attribute": "lastName"
       }
@@ -190,7 +191,7 @@
       "identityProviderMapper": "saml-user-attribute-idp-mapper",
       "config": {
         "syncMode": "FORCE",
-        "attribute": "mail",
+        "attribute": "urn:oid:0.9.2342.19200300.100.1.3",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
         "user.attribute": "email"
       }
