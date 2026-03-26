@@ -10,4 +10,6 @@ RUN chmod +x /entrypoint.sh
 
 USER keycloak
 
+ENV JAVA_TOOL_OPTIONS="-Xms256m -Xmx512m -XX:MaxMetaspaceSize=192m"
+
 ENTRYPOINT ["/entrypoint.sh"]
