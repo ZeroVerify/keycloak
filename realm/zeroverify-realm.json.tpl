@@ -102,6 +102,39 @@
   ],
   "identityProviders": [
     {
+      "alias": "mock-idp",
+      "displayName": "Mock Oakland IdP",
+      "internalId": "c9d0e1f2-a3b4-5678-2345-678901234abc",
+      "providerId": "saml",
+      "enabled": true,
+      "trustEmail": true,
+      "storeToken": false,
+      "addReadTokenRoleOnCreate": false,
+      "authenticateByDefault": false,
+      "linkOnly": false,
+      "firstBrokerLoginFlowAlias": "first broker login",
+      "config": {
+        "entityId": "https://keycloak.zeroverify.net/realms/zeroverify",
+        "idpEntityId": "https://keycloak.zeroverify.net/realms/mock-idp",
+        "singleSignOnServiceUrl": "https://keycloak.zeroverify.net/realms/mock-idp/protocol/saml",
+        "singleLogoutServiceUrl": "",
+        "signingCertificate": "__MOCK_IDP_CERT__",
+        "nameIDPolicyFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+        "principalType": "SUBJECT",
+        "postBindingResponse": "true",
+        "postBindingAuthnRequest": "true",
+        "postBindingLogout": "true",
+        "allowCreate": "true",
+        "validateSignature": "true",
+        "wantAssertionsSigned": "true",
+        "wantAuthnRequestsSigned": "false",
+        "signatureAlgorithm": "RSA_SHA256",
+        "addExtensionsElementWithKeyInfo": "false",
+        "syncMode": "FORCE",
+        "xmlSigKeyInfoKeyNameTransformer": "KEY_ID"
+      }
+    },
+    {
       "alias": "oakland-shibboleth",
       "displayName": "Oakland University",
       "internalId": "c3d4e5f6-a7b8-9012-cdef-123456789abc",
@@ -136,6 +169,66 @@
     }
   ],
   "identityProviderMappers": [
+    {
+      "id": "1a2b3c4d-e5f6-7890-abcd-ef0123456701",
+      "name": "mock-idp-username-from-eppn",
+      "identityProviderAlias": "mock-idp",
+      "identityProviderMapper": "saml-username-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.6",
+        "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "template": "${ATTRIBUTE.urn:oid:1.3.6.1.4.1.5923.1.1.1.6}"
+      }
+    },
+    {
+      "id": "2b3c4d5e-f6a7-8901-bcde-f01234567801",
+      "name": "mock-idp-enrollment-status-mapper",
+      "identityProviderAlias": "mock-idp",
+      "identityProviderMapper": "saml-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
+        "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "user.attribute": "enrollment_status"
+      }
+    },
+    {
+      "id": "3c4d5e6f-a7b8-9012-cdef-012345678901",
+      "name": "mock-idp-given-name-mapper",
+      "identityProviderAlias": "mock-idp",
+      "identityProviderMapper": "saml-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "attribute": "urn:oid:2.5.4.42",
+        "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "user.attribute": "firstName"
+      }
+    },
+    {
+      "id": "4d5e6f7a-b8c9-0123-def0-123456789001",
+      "name": "mock-idp-family-name-mapper",
+      "identityProviderAlias": "mock-idp",
+      "identityProviderMapper": "saml-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "attribute": "urn:oid:2.5.4.4",
+        "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "user.attribute": "lastName"
+      }
+    },
+    {
+      "id": "5e6f7a8b-c9d0-1234-ef01-234567890101",
+      "name": "mock-idp-email-mapper",
+      "identityProviderAlias": "mock-idp",
+      "identityProviderMapper": "saml-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "attribute": "urn:oid:0.9.2342.19200300.100.1.3",
+        "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "user.attribute": "email"
+      }
+    },
     {
       "id": "d4e5f6a7-b8c9-0123-def0-234567890abc",
       "name": "username-from-eppn",
