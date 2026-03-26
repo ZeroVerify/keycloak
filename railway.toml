@@ -1,0 +1,9 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/realms/zeroverify/.well-known/openid-configuration"
+healthcheckTimeout = 120
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
