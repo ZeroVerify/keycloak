@@ -14,4 +14,4 @@ sed \
   "${TPL}" > "${OUT}"
 
 echo "Realm JSON written from template."
-exec /opt/keycloak/bin/kc.sh start-dev --import-realm
+exec /opt/keycloak/bin/kc.sh start-dev --import-realm --http-port="${PORT:-8080}"
