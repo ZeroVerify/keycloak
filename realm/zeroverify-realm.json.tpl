@@ -10,8 +10,8 @@
   "resetPasswordAllowed": false,
   "editUsernameAllowed": false,
   "accessTokenLifespan": 300,
-  "ssoSessionIdleTimeout": 1800,
-  "ssoSessionMaxLifespan": 36000,
+  "ssoSessionIdleTimeout": 300,
+  "ssoSessionMaxLifespan": 300,
   "defaultSignatureAlgorithm": "RS256",
   "browserSecurityHeaders": {
     "xFrameOptions": "SAMEORIGIN",

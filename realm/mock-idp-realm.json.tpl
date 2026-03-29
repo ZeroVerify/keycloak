@@ -109,12 +109,12 @@
           "id": "e5f6a7b8-c9d0-1234-ef01-234567890801",
           "name": "given-name",
           "protocol": "saml",
-          "protocolMapper": "saml-user-property-mapper",
+          "protocolMapper": "saml-user-attribute-mapper",
           "consentRequired": false,
           "config": {
             "attribute.name": "urn:oid:2.5.4.42",
             "attribute.nameformat": "URI Reference",
-            "property": "firstName",
+            "user.attribute": "firstName",
             "friendly.name": "givenName"
           }
         },
@@ -122,12 +122,12 @@
           "id": "f6a7b8c9-d0e1-2345-f012-345678901801",
           "name": "family-name",
           "protocol": "saml",
-          "protocolMapper": "saml-user-property-mapper",
+          "protocolMapper": "saml-user-attribute-mapper",
           "consentRequired": false,
           "config": {
             "attribute.name": "urn:oid:2.5.4.4",
             "attribute.nameformat": "URI Reference",
-            "property": "lastName",
+            "user.attribute": "lastName",
             "friendly.name": "sn"
           }
         },
@@ -135,12 +135,12 @@
           "id": "a7b8c9d0-e1f2-3456-0123-456789012801",
           "name": "email",
           "protocol": "saml",
-          "protocolMapper": "saml-user-property-mapper",
+          "protocolMapper": "saml-user-attribute-mapper",
           "consentRequired": false,
           "config": {
             "attribute.name": "urn:oid:0.9.2342.19200300.100.1.3",
             "attribute.nameformat": "URI Reference",
-            "property": "email",
+            "user.attribute": "email",
             "friendly.name": "mail"
           }
         }
