@@ -109,6 +109,20 @@
             "claim.name": "custom_claims.enrollment_status",
             "jsonType.label": "String"
           }
+        },
+        {
+          "id": "c2d3e4f5-a6b7-8901-bcde-f12345678901",
+          "name": "identity-provider",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "identity_provider",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "identity_provider",
+            "jsonType.label": "String"
+          }
         }
       ]
     }
