@@ -200,7 +200,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
+        "attribute.name": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "enrollment_status"
       }
     },
@@ -212,7 +214,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:2.5.4.42",
+        "attribute.name": "urn:oid:2.5.4.42",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "firstName"
       }
     },
@@ -224,7 +228,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:2.5.4.4",
+        "attribute.name": "urn:oid:2.5.4.4",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "lastName"
       }
     },
@@ -236,7 +242,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:0.9.2342.19200300.100.1.3",
+        "attribute.name": "urn:oid:0.9.2342.19200300.100.1.3",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "email"
       }
     },
@@ -248,7 +256,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.6",
+        "attribute.name": "urn:oid:1.3.6.1.4.1.5923.1.1.1.6",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "template": "${ATTRIBUTE.urn:oid:1.3.6.1.4.1.5923.1.1.1.6}"
       }
     },
@@ -260,7 +270,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
+        "attribute.name": "urn:oid:1.3.6.1.4.1.5923.1.1.1.1",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "enrollment_status"
       }
     },
@@ -272,7 +284,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:2.5.4.42",
+        "attribute.name": "urn:oid:2.5.4.42",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "firstName"
       }
     },
@@ -284,7 +298,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:2.5.4.4",
+        "attribute.name": "urn:oid:2.5.4.4",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "lastName"
       }
     },
@@ -296,7 +312,9 @@
       "config": {
         "syncMode": "FORCE",
         "attribute": "urn:oid:0.9.2342.19200300.100.1.3",
+        "attribute.name": "urn:oid:0.9.2342.19200300.100.1.3",
         "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+        "attribute.name.format": "ATTRIBUTE_FORMAT_URI",
         "user.attribute": "email"
       }
     }
