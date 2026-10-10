@@ -10,6 +10,7 @@
   "resetPasswordAllowed": false,
   "editUsernameAllowed": false,
   "accessTokenLifespan": 300,
+  "accessCodeLifespan": 300,
   "ssoSessionIdleTimeout": 300,
   "ssoSessionMaxLifespan": 300,
   "defaultSignatureAlgorithm": "RS256",
